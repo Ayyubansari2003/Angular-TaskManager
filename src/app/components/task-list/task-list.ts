@@ -37,17 +37,17 @@ export class TaskListComponent {
     if (this.newTask.trim()) {
       this.taskService.addTask(this.newTask);
       this.newTask = '';
-      this.tasks = [...this.taskService.getTasks()]; // ✅ UI refresh
+      this.tasks = [...this.taskService.getTasks()]; 
     }
   }
 
   toggleTask(id: number) {
     this.taskService.toggleTask(id);
-    this.tasks = [...this.taskService.getTasks()]; // ✅ refresh after toggle
+    this.tasks = [...this.taskService.getTasks()]; 
   }
 
   deleteTask(id: number) {
-    this.taskService.deleteTask(id);               // ✅ Service update
-    this.tasks = [...this.taskService.getTasks()]; // ✅ UI refresh
+    this.taskService.deleteTask(id);               
+    this.tasks = [...this.taskService.getTasks()];
   }
 }
