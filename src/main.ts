@@ -1,6 +1,6 @@
 import 'zone.js';
 import { bootstrapApplication } from '@angular/platform-browser';
-import { provideAnimations } from '@angular/platform-browser/animations'; // ✅ Import
+import { provideAnimations } from '@angular/platform-browser/animations';
 import { App } from './app/app';
 import { appConfig } from './app/app.config';
 
@@ -8,6 +8,6 @@ bootstrapApplication(App, {
   ...appConfig,
   providers: [
     ...(appConfig.providers || []),
-    provideAnimations() // ✅ Add this
+    provideAnimations() 
   ]
 }).catch(err => console.error(err));

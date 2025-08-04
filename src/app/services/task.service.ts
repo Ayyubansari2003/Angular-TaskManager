@@ -23,7 +23,7 @@ export class TaskService {
     }
   }
 
-  // ✅ Delete task permanently in service
+  
   deleteTask(id: number) {
     this.tasks = this.tasks.filter(task => task.id !== id);
   }
